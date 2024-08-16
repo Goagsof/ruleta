@@ -1,0 +1,67 @@
+/* Importar la librería Animate.css para las animaciones */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #4b0082, #8a2be2); /* Gradiente morado */
+    animation: backgroundAnimation 10s ease-in-out infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con transparencia */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Desenfoque para darle un efecto más elegante */
+    animation: fadeInContainer 2s ease forwards;
+}
+
+@keyframes fadeInContainer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 28px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    animation: slideInDown 1s ease;
+}
+
+button {
+    background-color: rgba(75, 0, 130, 0.8); /* Morado con transparencia */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 15px 0;
+    transition: background-color 0.3s ease, transform 0.2s;
+    animation: bounceIn 1.5s ease;
+}
+
+button:hover {
+    background-color: rgba(138, 43, 226, 0.9); /* Morado más claro al pasar el ratón */
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
